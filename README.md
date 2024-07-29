@@ -4,4 +4,4 @@ Jianghang Gu, Mengge Du, Yuntian Chen, and Shiyi Chen, Discovery of Green's func
 
 Overview of the mining of Green's function based on DISCOVER framework:  
 
-<img src="img/fig1.png" height="800">
+<img src="img/fig1.png" height="500">
