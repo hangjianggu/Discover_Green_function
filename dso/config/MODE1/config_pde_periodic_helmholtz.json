@@ -1,0 +1,91 @@
+{
+    "experiment": {
+        "logdir": "./log/MODE1",
+        "seed": 0
+    },
+    "task": {
+        "task_type": "pde",
+        "dataset": "periodic_helmholtz",
+        "function_set": ["add", "mul", "sub", "sin", "const"],
+        "metric": "pde_reward",
+        "metric_params": [
+            0.01
+        ],
+        "extra_metric_test": null,
+        "extra_metric_test_params": [],
+        "threshold": 0.0005,
+        "protected": false,
+        "reward_noise": 0.0,
+        "reward_noise_type": "r",
+        "normalize_variance": false,
+        "decision_tree_threshold_set": []
+    },
+    "gp_meld": {
+        "run_gp_meld": false,
+        "verbose": false
+    },
+    "training": {
+        "n_samples": 500000,
+        "batch_size": 500,
+        "epsilon": 0.01,
+        "n_cores_batch": 1,
+        "early_stopping": false,
+        "const_optimizer": "scipy"
+    },
+    "controller": {
+        "learning_rate": 0.0025,
+        "entropy_weight": 0.03,
+        "entropy_gamma": 0.7,
+        "pqt": true,
+        "pqt_k": 10,
+        "pqt_batch_size": 1,
+        "pqt_weight": 0.0,
+        "pqt_use_pg": true,
+        "attention": true
+    },
+    "prior": {
+        "length": {
+            "min_": 3,
+            "max_": 256,
+            "on": true
+        },
+        "repeat": {
+            "tokens": "add",
+            "min_": null,
+            "max_": 10,
+            "on": true
+        },
+        "inverse": {
+            "on": false
+        },
+        "trig": {
+            "on": false
+        },
+        "const": {
+            "on": true
+        },
+        "no_inputs": {
+            "on": false
+        },
+        "uniform_arity": {
+            "on": false
+        },
+        "soft_length": {
+            "loc": 10,
+            "scale": 5,
+            "on": true
+        },
+        "diff_left": {
+            "on": true
+        },
+        "diff_right": {
+            "on": true
+        },
+        "diff_descedent": {
+            "on": true
+        },
+        "nest_des": {
+         "on": true
+      }
+    }
+}
